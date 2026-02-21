@@ -1,0 +1,111 @@
+.toggle-content {
+  background-image: url("../assets/section-bg/sec-bg2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Start Job Titles */
+
+.job-titles .container .section-body {
+  padding: 50px 0;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.job-titles .container .section-body .job-title {
+  background-color: var(--color-tertiary);
+  border: 20px solid var(--color-primary);
+  /*  */
+  width: 520px;
+  height: 240px;
+  border-radius: 1rem;
+  padding: 1rem;
+  /*  */
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+@media (max-width: 599px) {
+  .job-titles .container .section-body .job-title {
+    flex-direction: column-reverse;
+    height: unset;
+    width: unset;
+    gap: 3rem;
+  }
+}
+
+.job-titles .container .section-body .job-title .info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  /* align-items: space-between; */
+}
+
+.job-titles .container .section-body .job-title .info h2 {
+  margin: 0;
+  background-color: white;
+  color: var(--color-primary);
+  /* width: fit-content; */
+  padding: 0 50px 0 10px;
+  /*  */
+  line-height: 1.3;
+  font-size: 25px;
+  /*  */
+  height: 40px;
+  position: relative;
+}
+
+.job-titles .container .section-body .job-title .info h2::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background-color: var(--color-grey-medium);
+}
+
+.job-titles .container .section-body .job-title .info p {
+  flex-grow: 1;
+  background-color: white;
+  overflow-y: auto;
+  /* max-height: 100px; */
+  padding: 5px 15px;
+  margin: 0;
+}
+
+@media (max-width: 599px) {
+  .job-titles .container .section-body .job-title .info h2,
+  .job-titles .container .section-body .job-title .info p {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 372px) {
+  .job-titles .container .section-body .job-title .info h2 {
+    height: unset;
+    text-align: center;
+    padding-bottom: 8px;
+    line-height: 1.1;
+  }
+}
+
+.job-titles .container .section-body .job-title .icon {
+  /* padding: 3rem; */
+  background-color: white;
+  aspect-ratio: 1 / 1; /* width = height */
+  height: 100%;
+  border-radius: 2rem 0;
+}
+
+@media (max-width: 599px) {
+  .job-titles .container .section-body .job-title .icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* End Job Titles */

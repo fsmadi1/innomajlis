@@ -1,0 +1,23 @@
+{
+    "document": {
+        "title": "Inno Majlis"
+    },
+    "header": {
+        "page": {
+            "home": "Home",
+            "story": "Our Story",
+            "service": "Our Services",
+            "contact": "Get In Touch"
+        }
+    },
+    "hero": {
+        "line1": "Welcome",
+        "line2": "to our company."
+    },
+    "footer": {
+        "phone": "+966 58 251 1555",
+        "email": "info@ss-pmo.com",
+        "location": "الرياض، الممكلة العربية السعودية",
+        "rights": "جميع الحقوق محفوظة © لشركة الحل المستدام لإدارة المشاريع"
+    }
+}

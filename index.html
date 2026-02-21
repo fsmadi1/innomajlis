@@ -1,14 +1,325 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/react-app/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="./assets/Favicon.svg" />
+
+  <!-- Start Linking CSS -->
+  <link rel="stylesheet" href="./style/global.css" />
+  <link rel="stylesheet" href="./style/home.css" />
+  <title data-i18n="document.title">المجلس الابتكاري</title>
+  <!--  -->
+</head>
+
+<body>
+  <!-- Scroll To Top Progress Button -->
+  <!-- <div id="btn-scroll-top">
+    <span id="progress-value">&#x1F815;</span>
+  </div> -->
+  <!--  -->
+  <!-- Overlay -->
+  <div id="overlay"></div>
+  <!--  -->
+  <!-- Start Mobile Menu -->
+  <!-- End Mobile Menu -->
+  <div class="mobile-menu">
+    <ul class="links">
+      <!-- li -->
+      <li>
+        <a href="/" class="active">
+          <span class="list-style"></span>
+          <span class="text" data-i18n="header.page.home">الصفحة الرئيسية</span>
+          <span class="list-style"></span>
+        </a>
+      </li>
+      <!-- li -->
+      <li>
+        <a href="/pages/our-story.html">
+          <span class="list-style"></span>
+          <span class="text" data-i18n="header.page.story">قصتنا</span>
+          <span class="list-style"></span>
+        </a>
+      </li>
+      <!-- li -->
+      <li>
+        <a href="/pages/our-services.html">
+          <span class="list-style"></span>
+          <span class="text" data-i18n="header.page.service">خدماتنا</span>
+          <span class="list-style"></span>
+        </a>
+      </li>
+      <!-- li -->
+      <li>
+        <a href="/pages/get-in-touch.html">
+          <span class="list-style"></span>
+          <span class="text" data-i18n="header.page.contact">تواصل معنا</span>
+          <span class="list-style"></span>
+        </a>
+      </li>
+
+
+    </ul>
+  </div>
+  <!-- ---<>---<>---<>--- -->
+  <!-- Start Header -->
+  <div class="header">
+    <div class="container">
+      <div class="section-body">
+        <div class="links-logo">
+          <div class="alt-logo flex-center">
+            <img src="./assets/alt-logo.svg" alt="NO LOGO">
+          </div>
+          <!--  -->
+          <ul class="links">
+            <!-- li -->
+            <li>
+              <a href="/" class="active">
+                <span class="list-style"></span>
+                <span class="text" data-i18n="header.page.home">الصفحة الرئيسية</span>
+              </a>
+            </li>
+            <!-- li -->
+            <li>
+              <a href="/pages/our-story.html">
+                <span class="list-style"></span>
+                <span class="text" data-i18n="header.page.story">قصتنا</span>
+              </a>
+            </li>
+            <!-- li -->
+            <li>
+              <a href="/pages/our-services.html">
+                <span class="list-style"></span>
+                <span class="text" data-i18n="header.page.service">خدماتنا</span>
+              </a>
+            </li>
+            <!-- li -->
+            <li>
+              <a href="/pages/get-in-touch.html">
+                <span class="list-style"></span>
+                <span class="text" data-i18n="header.page.contact">تواصل معنا</span>
+              </a>
+            </li>
+
+
+          </ul>
+        </div>
+        <!--  -->
+        <div class="menu-icon flex-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-3">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 6h10" />
+            <path d="M4 12h16" />
+            <path d="M7 12h13" />
+            <path d="M4 18h10" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Header -->
+
+  <div class="hero-toggle-section">
+    <!-- Start Language Toggle -->
+
+    <div class="lang-toggle">
+      <div class="container">
+        <!-- Language Toggle -->
+        <div class="flipswitch">
+          <input id="fs" class="flipswitch-cb" name="flipswitch" type="checkbox" checked>
+          <label for="fs" class="flipswitch-label">
+            <div class="flipswitch-inner"></div>
+            <div class="flipswitch-switch"></div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Language Toggle -->
+
+    <!-- Start Hero Section -->
+
+    <div class="hero-section">
+      <div class="container">
+        <div class="section-body">
+          <h1 class="hero-title">
+            <span class="line1" data-i18n="hero.line1">مرحبًا بكم</span>
+            <span class="line2" data-i18n="hero.line2">في شركتنا.</span>
+          </h1>
+          <!-- Start Image Slider -->
+          <div class="slider-container">
+            <div class="slider-controls">
+              <span id="indicators" class="indicators"></span>
+            </div>
+            <!--  -->
+            <div id="slide-number" class="slide-number"></div>
+            <div class="slider-imgs">
+              <img decoding="async" src="./assets/slider-imgs/01.jpg" />
+              <img decoding="async" src="./assets/slider-imgs/02.jpg" />
+              <img decoding="async" src="./assets/slider-imgs/03.jpg" />
+            </div>
+            <!-- P-N Controls -->
+            <span id="next" class="next flex-center">‹</span>
+            <span id="prev" class="prev flex-center">›</span>
+          </div>
+
+          <!-- End Image Slider -->
+        </div>
+      </div>
+    </div>
+
+    <!-- End Hero Section -->
+  </div>
+
+  <!-- Start Home Middle Section -->
+  <div class="middle-section">
+    <div class="container">
+      <div class="section-body">
+        <div class="overview">
+          <div class="text-content">
+            <h2>المجلس الابتكاري</h2>
+            <p>يُعدّ مجلس الابتكار منصةً استراتيجية لتعزيز الابتكار العملي
+              نجمع بين المفكّرين والمطوّرين وصنّاع القرار لتحديد التحديات
+              ذات القيمة، وتحويل الحلول من الفكرة إلى التنفيذ.</p>
+          </div>
+          <img src="./assets/section-imgs/Image1.jpg" decoding="async">
+        </div>
+        <!-- What We Do -->
+        <div class="what-we-do">
+          <div class="text-content">
+            <h2>ما نقوم به</h2>
+            <p>ندعم الابتكار حيث تكون له القيمة الأكبر: عند تقاطع الاستراتيجية والتكنولوجيا وقيود الواقع العملي.</p>
+          </div>
+          <!--  -->
+          <div class="elements flex-center">
+            <div class="box">
+              <div class="icon"><img src="./assets/icons-group1/icon4.svg" decoding="async"></div>
+              <p>ربط المواهب والشركاء والموارد</p>
+            </div>
+            <!--  -->
+            <div class="box">
+              <div class="icon"><img src="./assets/icons-group1/icon3.svg" decoding="async"></div>
+              <p>دعم التنفيذ من خلال توجيه منهجي</p>
+            </div>
+            <!--  -->
+            <div class="box">
+              <div class="icon"><img src="./assets/icons-group1/icon2.svg" decoding="async"></div>
+              <p>تقييم الأفكار ذات الجدوى التجارية والأثر المجتمعي</p>
+            </div>
+            <!--  -->
+            <div class="box">
+              <div class="icon"><img src="./assets/icons-group1/icon1.svg" decoding="async"></div>
+              <p>تحديد الفرص الناشئة</p>
+            </div>
+            <!--  -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Home Middle Section -->
+  <!-- ---<>---<>---<>--- -->
+  <!-- Start Below Section -->
+  <div class="below-section">
+    <div class="container">
+      <div class="section-body">
+        <div class="our-approach">
+          <img src="./assets/section-imgs/Image2.jpg" decoding="async">
+          <div class="text-content">
+            <h2>نهجنا</h2>
+            <p>يبدأ عملنا بتحديد واضح للمشكلة، يتبعه استكشاف منهجي
+              واتخاذ قرارات مبنية على المعرفة. نختبر الأفكار مبكرًا في
+              ضوء القيود، ونراجع الافتراضات، ونصقل الاتجاه قبل
+              الالتزام بالموارد.</p>
+          </div>
+        </div>
+        <!-- .-.-.-.-. -->
+        <!-- Convinced? -->
+        <div class="convinced txt-center">
+          <span class="question block">هل اقتنعت؟</span>
+          <a href="#" class="flex-center margin-center">
+            <span class="list-style block nowrap"></span>
+            <span class="text block nowrap" data-i18n="below-section.convinced.story">تواصل معنا</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Below Section -->
+
+  <!-- Start Footer -->
+
+  <div class="footer">
+    <div class="container">
+      <div class="section-body">
+        <h2>اتصل بنا</h2>
+        <div class="details">
+          <div class="info">
+            <div class="element">
+              <!-- Put here svg element -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.49a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" />
+              </svg>
+              <span class="phone">(+966) 564 101 201</span>
+            </div>
+            <!--  -->
+            <div class="element">
+              <!-- Put here svg element -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20 4H4a2 2 0 00-2 2v.01L12 13l10-6.99V6a2 2 0 00-2-2zm0 4.24l-7.6 5.32a1 1 0 01-1.2 0L4 8.24V18a2 2 0 002 2h12a2 2 0 002-2V8.24z" />
+              </svg>
+              <span class="email">info@innomajlis.com</span>
+            </div>
+            <!--  -->
+            <div class="element">
+              <!-- Put here svg element -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
+              </svg>
+              <span class="address">Adress, street name, etc</span>
+            </div>
+          </div>
+          <div class="links">
+            <a href="https://www.facebook.com/" class="facebook">
+              <!-- svg here -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22 12a10 10 0 10-11.5 9.87v-6.99H8v-2.88h2.5V9.41c0-2.47 1.47-3.84 3.72-3.84 1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.22 0-1.6.76-1.6 1.54v1.85H16.3l-.43 2.88h-2.29v6.99A10 10 0 0022 12z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/" class="instagram">
+              <!-- svg here -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 9a3 3 0 100 6 3 3 0 000-6z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/" class="linkedin">
+              <!-- svg here -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 11.02 5 2.5 2.5 0 01-.02-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.75 2.63 4.75 6.05V21h-4v-5.65c0-1.35-.02-3.08-1.88-3.08-1.88 0-2.17 1.47-2.17 2.98V21H9z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- End Footer -->
+
+  <!--  -->
+  <!-- Link JavaScript File -->
+  <script src="./js/app.js"></script>
+  <script src="./js/img-slider.js"></script>
+</body>
+
 </html>
