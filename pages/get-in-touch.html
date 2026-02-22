@@ -8,7 +8,7 @@
 
     <!-- Start Linking CSS -->
     <link rel="stylesheet" href="../style/global.css" />
-    <link rel="stylesheet" href="../style/our-services.css" />
+    <link rel="stylesheet" href="../style/get-in-touch.css" />
     <title data-i18n="document.title">المجلس الابتكاري</title>
     <!--  -->
 </head>
@@ -122,21 +122,72 @@
     </div>
     <!-- End Header -->
 
-
-    <!-- Start Language Toggle -->
-    <div class="lang-toggle">
-        <div class="container">
-            <!-- Language Toggle -->
-            <div class="flipswitch">
-                <input id="fs" class="flipswitch-cb" name="flipswitch" type="checkbox" checked>
-                <label for="fs" class="flipswitch-label">
-                    <div class="flipswitch-inner"></div>
-                    <div class="flipswitch-switch"></div>
-                </label>
+    <div class="toggle-contact">
+        <!-- Start Language Toggle -->
+        <div class="lang-toggle">
+            <div class="container">
+                <!-- Language Toggle -->
+                <div class="flipswitch">
+                    <input id="fs" class="flipswitch-cb" name="flipswitch" type="checkbox" checked>
+                    <label for="fs" class="flipswitch-label">
+                        <div class="flipswitch-inner"></div>
+                        <div class="flipswitch-switch"></div>
+                    </label>
+                </div>
             </div>
         </div>
+        <!-- End Language Toggle -->
+
+        <!-- Start Contact Form -->
+        <div class="contact-form">
+            <div class="container">
+                <div class="section-body">
+                    <h1 data-i18n="contactUs.h1">اتصل بنا:</h1>
+                    <form>
+                        <!-- Input Fields -->
+                        <div class="input-fields">
+                            <div class="field name">
+                                <label for="name" data-i18n="contactUs.contactForm.lbl.name">الاسم</label>
+                                <input type="text" id="name">
+                            </div>
+                            <!-- input -->
+                            <div class="field email">
+                                <label for="email" data-i18n="contactUs.contactForm.lbl.email">البريد الإلكتروني</label>
+                                <input type="email" id="email">
+                            </div>
+                            <!-- input -->
+                            <div class="field phone">
+                                <label for="phone" data-i18n="contactUs.contactForm.lbl.phone">رقم الهاتف</label>
+                                <input type="text" id="phone">
+                            </div>
+                            <!-- input -->
+                            <div class="field company">
+                                <label for="company" data-i18n="contactUs.contactForm.lbl.company">الشركة</label>
+                                <input type="text" id="company">
+                            </div>
+                            <!-- input -->
+                            <div class="field service">
+                                <label for="service" data-i18n="contactUs.contactForm.lbl.service">الخدمة</label>
+                                <select id="service">
+                                    <option value="op1">op1</option>
+                                    <option value="op2">op2</option>
+                                    <option value="op3">op3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Text Message -->
+                        <div class="txt-msg">
+                            <label for="txt-msg" data-i18n="contactUs.contactForm.lbl.txtMsg">نص الرسالة</label>
+                            <textarea id="txt-msg"></textarea>
+                            <button data-i18n="contactUs.contactForm.btn.send">إرسال</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Contact Form -->
     </div>
-    <!-- End Language Toggle -->
+
 
 
 
@@ -144,7 +195,7 @@
     <div class="footer">
         <div class="container">
             <div class="section-body">
-                <h2>اتصل بنا</h2>
+                <h2 data-i18n="footer.h2">اتصل بنا</h2>
                 <div class="details">
                     <div class="info">
                         <div class="element">
@@ -174,7 +225,7 @@
                                 <path
                                     d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z" />
                             </svg>
-                            <span class="address">Adress, street name, etc</span>
+                            <span class="address" data-i18n="footer.address">Adress, street name, etc</span>
                         </div>
                     </div>
                     <div class="links">

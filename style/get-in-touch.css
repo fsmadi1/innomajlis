@@ -1,0 +1,103 @@
+.toggle-contact {
+  background-image: url("../assets/section-bg/sec-bg2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Start Contact Form */
+
+.contact-form .container .section-body {
+  padding: 50px 0;
+}
+
+.contact-form .container .section-body h1 {
+  font-size: 60px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.contact-form .container .section-body form {
+  background-color: var(--color-tertiary);
+  border: 20px solid var(--color-primary);
+  width: fit-content;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.contact-form .container .section-body form .input-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.contact-form .container .section-body form .input-fields .field label,
+.contact-form .container .section-body form .txt-msg label {
+  display: block;
+  color: white;
+}
+
+.contact-form .container .section-body form .input-fields .field input {
+  outline: none;
+  border: none;
+  width: 245px;
+  padding: 5px 10px;
+}
+
+.contact-form .container .section-body form .input-fields .field select {
+  background-color: white;
+  border: none;
+  width: 245px;
+  padding: 5px 10px;
+}
+
+.contact-form .container .section-body form .txt-msg {
+  margin-top: 1em;
+  /*  */
+  position: relative;
+}
+
+.contact-form .container .section-body form .txt-msg textarea {
+  width: 100%;
+  aspect-ratio: 4/1;
+  resize: none;
+  padding: 10px 10px 35px;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 642px) {
+  .contact-form .container .section-body form .input-fields {
+    display: block;
+  }
+
+  .contact-form .container .section-body form .input-fields .field {
+    margin-bottom: 1em;
+  }
+
+  .contact-form .container .section-body form .txt-msg textarea {
+    aspect-ratio: 2/1;
+  }
+}
+
+.contact-form .container .section-body form .txt-msg button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  /*  */
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 3px 15px;
+  border-radius: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form .container .section-body form .txt-msg button:hover {
+  background-color: var(--color-tertiary);
+}
+
+/* End Contact Form */

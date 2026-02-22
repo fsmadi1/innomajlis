@@ -10,14 +10,82 @@
             "contact": "Get In Touch"
         }
     },
-    "hero": {
+    "homeHero": {
         "line1": "Welcome",
         "line2": "to our company."
     },
+    "homeMiddle": {
+        "sec1": {
+            "h2": "Innovation Council",
+            "p": "The Innovation Council is a strategic platform dedicated to advancing practical innovation. We bring together thinkers, builders, and decision-makers to identify problems worth solving and move solutions from concept to execution."
+        },
+        "sec2": {
+            "h2": "What We Do",
+            "p": "We support innovation where it matters most: at the intersection of strategy, technology, and real-world constraints.",
+            "ele1": "Connect talent, partners, and resources",
+            "ele2": "Support execution through structured guidance",
+            "ele3": "Evaluate ideas with commercial and societal relevance",
+            "ele4": "Identify emerging opportunities"
+        }
+    },
+    "homeBelow": {
+        "sec1": {
+            "h2": "Our Approach",
+            "p": "Our work starts with clear problem definition, followed by structured exploration and informed decision-making. Ideas are tested against constraints early, assumptions are challenged, and direction is refined before resources are committed."
+        },
+        "sec3": {
+            "span": "Convinced?",
+            "linkText": "Get In Touch"
+        }
+    },
+    "story": {
+        "sec1": {
+            "h2": "Our Story",
+            "p": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+        },
+        "sec2": {
+            "txt1": "Years",
+            "txt2": "of Experience",
+            "txt3": "[Certifications]"
+        },
+        "sec3": {
+            "vision": {
+                "h2": "Our Vision",
+                "p": "We aim to shape an environment in which organizations approach change with clarity, confidence, and discipline, building solutions that create long-term value for markets, institutions, and society."
+            },
+            "mission": {
+                "h2": "Our Mission",
+                "p": "To support decision-makers in identifying meaningful opportunities, evaluating them rigorously, and advancing solutions that are viable, responsible, and durable."
+            }
+        }
+    },
+    "services": {
+        "jobTitle1": {
+            "h2": "Job Title",
+            "p": "JobDescription [-][-][-][-][-] JobDescription [-][-][-][-][-] JobDescription [-][-][-][-][-] JobDescription [-][-][-][-][-]"
+        }
+    },
+    "contactUs": {
+        "h1": "Contact Us:",
+        "contactForm": {
+            "lbl": {
+                "name": "Name",
+                "email": "Email",
+                "phone": "Phone Number",
+                "company": "Company",
+                "service": "Service",
+                "txtMsg": "Text Message"
+            },
+            "btn": {
+                "send": "Send"
+            }
+        }
+    },
     "footer": {
+        "h2": "Contact Us",
         "phone": "+966 58 251 1555",
         "email": "info@ss-pmo.com",
-        "location": "الرياض، الممكلة العربية السعودية",
+        "address": "Riyadh, Saudi Arabia",
         "rights": "جميع الحقوق محفوظة © لشركة الحل المستدام لإدارة المشاريع"
     }
 }
