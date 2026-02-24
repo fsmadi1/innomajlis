@@ -47,19 +47,27 @@ async function loadLang(lang) {
 
 // End Languages Functions   ---- END
 
-// Fetch Json Data
+// Apply Translation
 // ----------------
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadLang("ar");
-  flipSwitch.checked = true;
+  // 1️⃣ Get saved language or default to Arabic
+  const savedLang = localStorage.getItem("lang") || "ar";
+
+  // 2️⃣ Load language
+  loadLang(savedLang);
+
+  // 3️⃣ Set switch state (true = Arabic for example)
+  flipSwitch.checked = savedLang === "ar";
 });
 
 flipSwitch.addEventListener("change", () => {
   if (flipSwitch.checked) {
     loadLang("ar");
+    localStorage.setItem("lang", "ar");
   } else {
     loadLang("en");
+    localStorage.setItem("lang", "en");
   }
 });
 
@@ -89,36 +97,6 @@ addEventListener("resize", () => {
     overlay.classList.remove("show-overlay");
   }
 });
-
-//  --- --- ---
-
-// Array.from(mobileMenu.children).forEach((child) => {
-//   child.onclick = () => {
-//     if (child.children.length > 0) {
-//       const items = child.querySelectorAll("li");
-//       //
-//       items.forEach((li) => {
-//         li.addEventListener("click", () => {
-//           mobileMenu.classList.remove("show-menu");
-//         });
-//       });
-//     } else {
-//       mobileMenu.classList.remove("show-menu");
-//     }
-//   };
-// });
-
-// ---<>---<>---<>---
-
-// document.addEventListener("click", (event) => {
-//   // console.log(event.target);
-//   if (
-//     !event.target.classList.contains("menu-icon") &&
-//     !mobileMenu.contains(event.target)
-//   ) {
-//     mobileMenu.classList.remove("show-menu");
-//   }
-// });
 
 // ---<>---<>---<>---
 
