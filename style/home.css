@@ -20,6 +20,7 @@
 
 .hero-section .container .section-body .hero-title {
   margin-bottom: 30px;
+  margin-top: 0;
 }
 
 .hero-section .container .section-body .hero-title span {
@@ -276,28 +277,9 @@ html[lang="en"] .hero-section .container .section-body .hero-title span.line2 {
   }
 }
 
-.middle-section .container .section-body .overview .text-content h2 {
-  margin: 0;
-  background-color: white;
-  color: var(--color-primary);
-  width: fit-content;
-  line-height: 1;
-  font-size: 30px;
-  padding: 0 50px 0 10px;
-  /*  */
-  height: 40px;
-  position: relative;
-}
+/* --->>> Main Title */
 
-.middle-section .container .section-body .overview .text-content h2::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 40px;
-  height: 100%;
-  background-color: var(--color-grey-medium);
-}
+/*  */
 
 .middle-section .container .section-body .overview .text-content p {
   margin: 0;
@@ -325,38 +307,7 @@ html[lang="en"] .hero-section .container .section-body .hero-title span.line2 {
   margin-bottom: 50px;
 }
 
-.middle-section .container .section-body .what-we-do .text-content h2 {
-  margin: 0 auto;
-  background-color: white;
-  color: var(--color-primary);
-  width: fit-content;
-  line-height: 1;
-  font-size: 30px;
-  padding: 0 30px 0 30px;
-  text-align: center;
-  /*  */
-  height: 40px;
-  width: 250px;
-  position: relative;
-}
-
-.middle-section .container .section-body .what-we-do .text-content h2::before,
-.middle-section .container .section-body .what-we-do .text-content h2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 20px;
-  background-color: var(--color-grey-medium);
-}
-
-.middle-section .container .section-body .what-we-do .text-content h2::before {
-  right: 0;
-}
-
-.middle-section .container .section-body .what-we-do .text-content h2::after {
-  left: 0;
-}
+/*  */
 
 .middle-section .container .section-body .what-we-do .text-content p {
   margin: 0;
@@ -435,28 +386,9 @@ html[lang="en"] .hero-section .container .section-body .hero-title span.line2 {
   }
 }
 
-.below-section .container .section-body .our-approach .text-content h2 {
-  margin: 0 auto 0 0;
-  background-color: var(--color-primary);
-  color: white;
-  width: fit-content;
-  line-height: 1;
-  font-size: 30px;
-  padding: 0 10px 0 50px;
-  /*  */
-  height: 40px;
-  position: relative;
-}
+/*  */
 
-.below-section .container .section-body .our-approach .text-content h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 40px;
-  height: 100%;
-  background-color: var(--color-grey-medium);
-}
+/*  */
 
 .below-section .container .section-body .our-approach .text-content p {
   margin: 0;

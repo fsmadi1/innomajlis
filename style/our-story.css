@@ -18,30 +18,6 @@
   padding: 1.3em;
 }
 
-.above-section .story-text .container .section-body h2 {
-  margin: 0;
-  background-color: white;
-  color: var(--color-primary);
-  width: fit-content;
-  padding: 0 50px 0 10px;
-  /*  */
-  line-height: 1;
-  font-size: 30px;
-  /*  */
-  height: 40px;
-  position: relative;
-}
-
-.above-section .story-text .container .section-body h2::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 40px;
-  height: 100%;
-  background-color: var(--color-grey-medium);
-}
-
 .above-section .story-text .container .section-body p {
   margin: 0;
   /*  */
@@ -189,32 +165,6 @@
 .vision-mission .mission {
   background-color: var(--color-tertiary);
   padding: 20px;
-}
-
-.vision-mission .vision h2,
-.vision-mission .mission h2 {
-  margin: 0;
-  background-color: white;
-  color: var(--color-primary);
-  width: fit-content;
-  padding: 0 50px 0 10px;
-  /*  */
-  line-height: 1;
-  font-size: 30px;
-  /*  */
-  height: 40px;
-  position: relative;
-}
-
-.vision-mission .vision h2::before,
-.vision-mission .mission h2::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 40px;
-  height: 100%;
-  background-color: var(--color-grey-medium);
 }
 
 .vision-mission .vision p,

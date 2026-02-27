@@ -7,7 +7,7 @@
 /* Start Contact Form */
 
 .contact-form .container .section-body {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 
 .contact-form .container .section-body h1 {
@@ -90,10 +90,12 @@
   background-color: var(--color-primary);
   color: white;
   border: none;
-  padding: 3px 15px;
+  padding: 0px 15px 3px;
   border-radius: 10px 0;
   cursor: pointer;
   transition: background-color 0.3s;
+  /*  */
+  font-family: "MadaniArabic-Regular";
 }
 
 .contact-form .container .section-body form .txt-msg button:hover {
