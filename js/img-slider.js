@@ -1,4 +1,4 @@
-// Start Image Slider
+// Start Image Slider -- NOT USED!
 // - --- - --- - --- -
 
 // Get Slider Items | Array.form [ES6 Feature]

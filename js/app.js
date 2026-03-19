@@ -11,6 +11,47 @@ const overlay = document.getElementById("overlay");
 let translations = {};
 //
 
+// Declaring Links Group Variables
+const mainLinks = document.querySelectorAll("ul#links-group01 li");
+const mobileLinks = document.querySelectorAll("ul#links-group02 li");
+
+// Handle Active Tab Functions
+
+// Remove Active Tab Handler
+const removeActiveTabFrom = (htmlElement) => {
+  htmlElement.forEach((link) => {
+    link.firstElementChild.classList.remove("active");
+  });
+};
+
+const loopThroughLinks = (mainUL, subUL) => {
+  mainUL.forEach((anchor) => {
+    anchor.onclick = () => {
+      // Remove active tab from both ul.links
+      removeActiveTabFrom(mainUL);
+      removeActiveTabFrom(subUL);
+      // get node index
+      const index = [...mainUL].indexOf(anchor);
+      console.log("index: ", index);
+      // add active tab to main ul.links
+      anchor.firstElementChild.classList.add("active");
+      // add active tab to sub ul.links
+      subUL[index].firstElementChild.classList.add("active");
+    };
+  });
+};
+
+const handleActiveTab = () => {
+  loopThroughLinks(mainLinks, mobileLinks);
+  loopThroughLinks(mobileLinks, mainLinks);
+};
+
+handleActiveTab();
+
+const handleSpecialClick = () => {
+  mainLinks[mainLinks.length - 1].firstElementChild.click();
+};
+
 // Start Languages Functions ---- START
 
 function getValue(obj, key) {
@@ -50,7 +91,7 @@ async function loadLang(lang) {
 // Apply Translation
 // ----------------
 
-document.addEventListener("DOMContentLoaded", () => {
+function loadSavedLang() {
   // 1️⃣ Get saved language or default to Arabic
   const savedLang = localStorage.getItem("lang") || "ar";
 
@@ -59,6 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 3️⃣ Set switch state (true = Arabic for example)
   flipSwitch.checked = savedLang === "ar";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadPage("home");
+  loadSavedLang();
 });
 
 flipSwitch.addEventListener("change", () => {
@@ -128,3 +174,175 @@ window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
 // End Scroll To Top Behavior
+
+const initSlider = () => {
+  // Start Image Slider
+  // - --- - --- - --- -
+
+  // Get Slider Items | Array.form [ES6 Feature]
+  let sliderImages = Array.from(
+    document.querySelectorAll(".slider-container img"),
+  );
+
+  // Get Number Of Slides
+  let slidesCount = sliderImages.length;
+
+  // Set Current Slide
+  let currentSlide = 1;
+
+  // Slide Number Element
+  let slideNumberElement = document.getElementById("slide-number");
+
+  // Previous and Next Buttons
+  let nextButton = document.getElementById("next");
+  let prevButton = document.getElementById("prev");
+
+  // Handle Click on Previous and Next Buttons
+  nextButton.onclick = nextSlide;
+  prevButton.onclick = prevSlide;
+
+  // Create The Main UL Element
+  let paginationElement = document.createElement("ul");
+
+  // Set ID On Created Ul Element
+  paginationElement.setAttribute("id", "pagination-ul");
+
+  // Create List Items Based On Slides Count
+  for (let i = 1; i <= slidesCount; i++) {
+    // Create The LI
+    let paginationItem = document.createElement("li");
+
+    // Set Custom Attribute
+    paginationItem.setAttribute("data-index", i);
+
+    // Set Item Content
+    //   Change Happend HERE!
+    //   paginationItem.appendChild(document.createTextNode(i));
+
+    // Append Items to The Main Ul List
+    paginationElement.appendChild(paginationItem);
+  }
+
+  // Add The Created UL Element to The Page
+  document.getElementById("indicators").appendChild(paginationElement);
+
+  // Get The New Created UL
+  let paginationCreatedUl = document.getElementById("pagination-ul");
+
+  // Get Pagination Items | Array.form [ES6 Feature]
+  let paginationsBullets = Array.from(
+    document.querySelectorAll("#pagination-ul li"),
+  );
+
+  // Loop Through All Bullets Items
+  for (let i = 0; i < paginationsBullets.length; i++) {
+    paginationsBullets[i].onclick = function () {
+      currentSlide = parseInt(this.getAttribute("data-index"));
+
+      theChecker();
+    };
+  }
+
+  // Trigger The Checker Function
+  theChecker();
+
+  // Next Slide Function
+  function nextSlide() {
+    if (nextButton.classList.contains("disabled")) {
+      // Do Nothing
+      return false;
+    } else {
+      currentSlide++;
+
+      theChecker();
+    }
+  }
+
+  // Previous Slide Function
+  function prevSlide() {
+    if (prevButton.classList.contains("disabled")) {
+      // Do Nothing
+      return false;
+    } else {
+      currentSlide--;
+
+      theChecker();
+    }
+  }
+
+  // Create The Checker Function
+  function theChecker() {
+    // Set The Slide Number
+    slideNumberElement.textContent =
+      "Slide #" + currentSlide + " of " + slidesCount;
+
+    // Remove All Active Classes
+    removeAllActive();
+
+    // Set Active Class On Current Slide
+    sliderImages[currentSlide - 1].classList.add("active");
+
+    // Set Active Class on Current Pagination Item
+    paginationCreatedUl.children[currentSlide - 1].classList.add("active");
+
+    // Check if Current Slide is The First
+    if (currentSlide == 1) {
+      // Add Disabled Class on Previous Button
+      prevButton.classList.add("disabled");
+    } else {
+      // Remove Disabled Class From Previous Button
+      prevButton.classList.remove("disabled");
+    }
+
+    // Check if Current Slide is The Last
+    if (currentSlide == slidesCount) {
+      // Add Disabled Class on Next Button
+      nextButton.classList.add("disabled");
+    } else {
+      // Remove Disabled Class From Next Button
+      nextButton.classList.remove("disabled");
+    }
+  }
+
+  // Remove All Active Classes From Images and Pagination Bullets
+  function removeAllActive() {
+    // Loop Through Images
+    sliderImages.forEach((img) => {
+      img.classList.remove("active");
+    });
+
+    // Loop Through Pagination Bullets
+    paginationsBullets.forEach(function (bullet) {
+      bullet.classList.remove("active");
+    });
+  }
+
+  // - --- - --- - --- -
+  // End Image Slider
+};
+
+// ---> Start SPA Behavior Simulation
+function loadPage(page) {
+  fetch("pages/" + page + ".html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("content").innerHTML = data;
+      loadSavedLang();
+      if (page === "home") initSlider();
+      //
+      setTimeout(() => {
+        scrollToTop();
+      }, 10);
+      //
+    });
+}
+
+// ---> End SPA Behavior Simulation
+
+// Scroll To Top Function
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}

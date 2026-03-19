@@ -387,6 +387,8 @@ ul {
 }
 
 .header .container .section-body ul.links li a {
+  cursor: pointer;
+  /*  */
   font-size: 20px;
   /*  */
   display: flex;
@@ -458,6 +460,8 @@ ul {
 }
 
 .mobile-menu ul.links li a {
+  cursor: pointer;
+  /*  */
   font-size: 20px;
   /*  */
   display: flex;

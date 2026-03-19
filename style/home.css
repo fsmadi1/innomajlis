@@ -415,6 +415,7 @@ html[lang="en"] .hero-section .container .section-body .hero-title span.line2 {
 }
 
 .below-section .container .section-body .convinced a {
+  cursor: pointer;
   /* flex-center */
   gap: 0.5em;
   /*  */

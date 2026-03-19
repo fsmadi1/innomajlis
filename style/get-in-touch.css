@@ -66,6 +66,8 @@
   padding: 10px 10px 35px;
   border: none;
   outline: none;
+  /*  */
+  font-family: "MadaniArabic-Regular";
 }
 
 @media (max-width: 642px) {
@@ -94,8 +96,6 @@
   border-radius: 10px 0;
   cursor: pointer;
   transition: background-color 0.3s;
-  /*  */
-  font-family: "MadaniArabic-Regular";
 }
 
 .contact-form .container .section-body form .txt-msg button:hover {
