@@ -4,27 +4,27 @@
         <div class="container">
             <div class="section-body">
                 <h1 data-i18n="contactUs.h1">اتصل بنا:</h1>
-                <form action="https://formspree.io/f/xjgazlrr" method="POST">
+                <form id="contact-form" action="https://formspree.io/f/xjgazlrr" method="POST">
                     <!-- Input Fields -->
                     <div class="input-fields">
                         <div class="field name">
                             <label for="name" data-i18n="contactUs.contactForm.lbl.name">الاسم</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" maxlength="100" required>
                         </div>
                         <!-- input -->
                         <div class="field email">
                             <label for="email" data-i18n="contactUs.contactForm.lbl.email">البريد الإلكتروني</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" maxlength="254" required>
                         </div>
                         <!-- input -->
                         <div class="field phone">
                             <label for="phone" data-i18n="contactUs.contactForm.lbl.phone">رقم الهاتف</label>
-                            <input type="text" id="phone" name="phone" required>
+                            <input id="phone" type="tel" inputmode="numeric" name="phone" maxlength="16" required>
                         </div>
                         <!-- input -->
                         <div class="field company">
                             <label for="company" data-i18n="contactUs.contactForm.lbl.company">الشركة</label>
-                            <input type="text" id="company" name="company" required>
+                            <input type="text" id="company" name="company" maxlength="150" required>
                         </div>
                         <!-- input -->
                         <div class="field service">
@@ -39,12 +39,13 @@
                     <!-- Text Message -->
                     <div class="txt-msg">
                         <label for="txt-msg" data-i18n="contactUs.contactForm.lbl.txtMsg">نص الرسالة</label>
-                        <textarea id="txt-msg" name="txt-msg" required></textarea>
+                        <textarea id="txt-msg" name="txt-msg" minlength="10" maxlength="200" required></textarea>
                         <button type="submit" data-i18n="contactUs.contactForm.btn.send">إرسال</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
     <!-- End Contact Form -->
 </div>
